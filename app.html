@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NeonStudy — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="neon-bg app-page">
+
+  <header class="app-top glass">
+    <div class="left">
+      <button id="menu-btn" class="icon-btn">☰</button>
+      <div class="app-title">NeonStudy</div>
+    </div>
+    <div class="right">
+      <div id="user-pill" class="user-pill">Guest</div>
+    </div>
+  </header>
+
+  <main class="home-wrap">
+    <section class="dashboard-3d">
+      <div id="orbit" class="orbit">
+        <!-- circular 3D items -->
+        <a class="orb-item" data-target="todo">📝<span>To-Do</span></a>
+        <a class="orb-item" data-target="schedule">📅<span>Schedule</span></a>
+        <a class="orb-item" data-target="assign">📚<span>Assignments</span></a>
+        <a class="orb-item" data-target="timer">⏲<span>Pomodoro</span></a>
+        <a class="orb-item" data-target="videos">🎥<span>Motivation</span></a>
+        <a class="orb-item" data-target="tips">💡<span>Tips</span></a>
+      </div>
+
+      <div class="floating-stats">
+        <div class="stat glass">
+          <div class="sval" id="statTasks">0</div>
+          <div class="slabel">Tasks</div>
+        </div>
+        <div class="stat glass">
+          <div class="sval" id="statMinutes">0</div>
+          <div class="slabel">Min studied</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-grid">
+      <div class="card glass interactive" data-card="todo">
+        <h3>Today</h3>
+        <p id="miniTask">No tasks yet</p>
+      </div>
+
+      <div class="card glass interactive" data-card="timer">
+        <h3>Quick Pomodoro</h3>
+        <div class="mini-timer" id="miniTimer">25:00</div>
+        <button class="btn small" id="miniStart">Start</button>
+      </div>
+
+      <div class="card glass" data-card="notes">
+        <h3>Quick Notes</h3>
+        <textarea id="quickNote" placeholder="Type a short note..."></textarea>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-bottom glass">
+    <button class="btn ghost" id="logoutBtn">Logout</button>
+    <div class="muted">NeonStudy • demo client app</div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
